@@ -9,6 +9,9 @@
     "lint": "next lint",
     "format": "prettier --write src/"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "@types/node": "18.14.1",
     "@types/react": "18.0.28",
