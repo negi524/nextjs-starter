@@ -1,8 +1,6 @@
 name: Pull Request
 
 on:
-  push:
-    branches: [feature/github_ci]
   pull_request:
     branches: [main]
 
@@ -23,3 +21,4 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: npm run lint
+      # FIXME: add test command
