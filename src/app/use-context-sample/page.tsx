@@ -1,6 +1,6 @@
 "use client";
 
-import ButtonSample from "@/components/atoms/button-sample";
+import ButtonSample from "@/components/atoms/ButtonSample";
 import ThemeContext from "./themeContext";
 
 export default function UseContextSamplePage() {
