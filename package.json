@@ -15,7 +15,9 @@
     "node": "20.x"
   },
   "dependencies": {
+    "@emotion/css": "^11.10.6",
     "@emotion/react": "^11.10.6",
+    "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.6",
     "@types/node": "18.14.1",
     "@types/react": "18.0.28",
