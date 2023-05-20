@@ -22,3 +22,12 @@ jobs:
       - run: npm run build --if-present
       - run: npm run lint
       - run: npm run test
+      - name: Tag check
+        run: |
+          # タグ情報のみfetch
+          git fetch --tags
+          git tag -n
+          # package.jsonからバージョン取得
+          export TAG_VERSION=$(node -e "console.log(require('./package.json').version)")
+          # 取得したバージョンでタグを生成
+          git tag $TAG_VERSION
