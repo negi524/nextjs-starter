@@ -25,8 +25,8 @@ jobs:
       - name: Tag check
         run: |
           # タグ情報のみfetch
-          git fetch --tags
-          git tag -n
+          # git fetch --tags
+          # git tag -n
           # package.jsonからバージョン取得
           export TAG_VERSION=$(node -e "console.log(require('./package.json').version)")
           # 取得したバージョンでタグを生成
