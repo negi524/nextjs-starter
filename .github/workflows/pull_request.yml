@@ -30,4 +30,4 @@ jobs:
           # package.jsonからバージョン取得
           export TAG_VERSION=$(node -e "console.log(require('./package.json').version)")
           # 取得したバージョンでタグを生成
-          git tag $TAG_VERSION
+          npm version $TAG_VERSION
