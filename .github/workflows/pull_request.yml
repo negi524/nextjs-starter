@@ -31,6 +31,6 @@ jobs:
           git fetch --tags
           git tag -n
           # package.jsonからバージョン取得
-          export TAG_VERSION=$(node -e "console.log(require('./package.json').version)")
+          export TAG_VERSION=v$(node -e "console.log(require('./package.json').version)")
           # 取得したバージョンでタグ生成を試みてエラーだったらバージョン変更なし
           git tag $TAG_VERSION
