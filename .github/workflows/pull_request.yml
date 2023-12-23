@@ -8,7 +8,6 @@ jobs:
   # ビルドとテストなどを検証する
   build_check:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [20.x]
@@ -30,7 +29,6 @@ jobs:
   # タグバージョンを検証する
   tag_check:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [20.x]
@@ -48,5 +46,6 @@ jobs:
           git tag -n
           # package.jsonからバージョン取得
           export TAG_VERSION=v$(node -e "console.log(require('./package.json').version)")
+          echo "this branch version is $TAG_VERSION"
           # 取得したバージョンでタグ生成を試みてエラーだったらバージョン変更なし
           git tag $TAG_VERSION
