@@ -20,7 +20,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       # ビルドチェック
-      - run: npm run build
+      - run: npm run build --if-present
       # フォーマットチェック
       - run: npm run lint
       # テスト実施
