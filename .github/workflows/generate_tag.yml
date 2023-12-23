@@ -1,11 +1,12 @@
 name: Generate git tag
 
-on:
-  pull_request:
-    branches:
-      - main
-    types:
-      - closed
+# on:
+#   pull_request:
+#     branches:
+#       - main
+#     types:
+#       - closed
+on: [push]
 
 permissions:
   actions: write
