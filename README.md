@@ -50,3 +50,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ```bash
 npm version patch --no-git-tag-version
 ```
+
+また、`main`ブランチマージ時に、`package.json`のバージョン内容をもとに自動的にタグが切られる。
