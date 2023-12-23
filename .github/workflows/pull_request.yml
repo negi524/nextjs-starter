@@ -27,7 +27,10 @@ jobs:
       - run: npm run test
       - name: Tag check
         run: |
+          # タグ情報のみfetch
+          git fetch --tags
+          git tag -n
           # package.jsonからバージョン取得
           export TAG_VERSION=$(node -e "console.log(require('./package.json').version)")
           # 取得したバージョンでタグ生成を試みてエラーだったらバージョン変更なし
-          npm version $TAG_VERSION
+          git tag $TAG_VERSION
