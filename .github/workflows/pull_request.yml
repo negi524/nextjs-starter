@@ -19,6 +19,18 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
+      # ビルドチェック
       - run: npm run build --if-present
+      # フォーマットチェック
       - run: npm run lint
+      # テスト実施
       - run: npm run test
+      - name: Tag check
+        run: |
+          # タグ情報のみfetch
+          git fetch --tags
+          git tag -n
+          # package.jsonからバージョン取得
+          export TAG_VERSION=$(node -e "console.log(require('./package.json').version)")
+          # 取得したバージョンでタグ生成を試みてエラーだったらバージョン変更なし
+          git tag $TAG_VERSION
