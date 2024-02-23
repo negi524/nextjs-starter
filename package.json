@@ -28,7 +28,6 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@stylexjs/babel-plugin": "^0.5.1",
     "@stylexjs/eslint-plugin": "^0.5.1",
     "@stylexjs/nextjs-plugin": "^0.5.1",
     "@testing-library/jest-dom": "^5.16.5",
