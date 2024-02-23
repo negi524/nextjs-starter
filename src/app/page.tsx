@@ -1,6 +1,14 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { Button } from "react-bootstrap";
+import stylex from "@stylexjs/stylex";
+
+// StyleXでスタイル定義
+const colorStyle = stylex.create({
+  blueColorStyle: {
+    color: "blue",
+  },
+});
 
 export default function Home() {
   return (
@@ -42,6 +50,7 @@ export default function Home() {
           <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
         </div>
       </div>
+      <p {...stylex.props(colorStyle.blueColorStyle)}>StyleX sample</p>
       <Button>Button Sample</Button>
 
       <div className={styles.grid}>
