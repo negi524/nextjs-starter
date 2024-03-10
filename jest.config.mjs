@@ -12,6 +12,8 @@ const config = {
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 
   testEnvironment: "jest-environment-jsdom",
+  // https://jestjs.io/ja/docs/configuration#extensionstotreatasesm-arraystring
+  extensionsToTreatAsEsm: [".ts"],
 
   // resolve absolue path
   moduleNameMapper: {
