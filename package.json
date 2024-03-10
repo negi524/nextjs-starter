@@ -12,7 +12,9 @@
     "test:watch": "NODE_OPTIONS=--experimental-vm-modules jest --watch"
   },
   "engines": {
-    "node": "20.x"
+    "node": "20.x",
+    "npm": "use yarn instead",
+    "yarn": "4.0.0"
   },
   "type": "commonjs",
   "dependencies": {
@@ -38,5 +40,6 @@
     "jest-environment-jsdom": "^29.7.0",
     "prettier": "^3.2.5",
     "typescript": "^5.3.3"
-  }
+  },
+  "packageManager": "yarn@4.1.1"
 }
