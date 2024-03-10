@@ -20,11 +20,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn install --immutable
       # ビルドチェック
-      - run: yarn run build
+      - run: yarn build
       # フォーマットチェック
-      - run: yarn run lint
+      - run: yarn lint
       # テスト実施
-      - run: yarn run test
+      - run: yarn test
 
   # タグバージョンを検証する
   tag_check:
