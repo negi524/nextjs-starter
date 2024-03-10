@@ -16,28 +16,12 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## TODO: Static Build
-
-First, execute the following command. This will generate the output files in the `out/` directory.
-
-```bash
-yarn build
-```
-
-To start the server using `http-server`
-
-```bash
-http-server out
-```
-
-Open [http://127.0.0.1:8081/](http://127.0.0.1:8081/) with your browser to see the result.
-
 ## バージョン管理
 
-パッケージのバージョンと git のバージョンを同期させるため、PR 段階でのバージョン上げは`--no-git-tag-version`オプションを付けて実施する。
+以下のコマンドにより、`package.json`のバージョンが上がる
 
 ```bash
-yarn version --patch --no-git-tag-version
+yarn version patch --immediate
 ```
 
 また、`main`ブランチマージ時に、`package.json`のバージョン内容をもとに自動的にタグが切られる。
