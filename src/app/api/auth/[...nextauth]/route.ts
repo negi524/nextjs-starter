@@ -9,7 +9,7 @@ export const authOptions: NextAuthOptions = {
   // Configure one or more authentication providers
   providers: [
     Credentials({
-      id: "user",
+      // id: "user",
       credentials: {
         email: {
           label: "メールアドレス",

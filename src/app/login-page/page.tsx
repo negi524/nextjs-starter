@@ -38,14 +38,15 @@ export default function LoginPage() {
    */
   const logoutView: JSX.Element = (
     <>
-      <form action={formAction}>
+      {/* <form action={formAction}>
         <label htmlFor="email">メールアドレス</label>
         <input type="email" name="email" id="email" required />
         <label htmlFor="password">パスワード</label>
         <input type="password" name="password" id="password" required />
         <input type="submit" value="ログイン" />
-      </form>
+      </form> */}
       <p>未ログインです</p>
+      <button onClick={() => signIn()}>Sign in</button>
     </>
   );
   return (
