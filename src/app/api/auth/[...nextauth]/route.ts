@@ -22,6 +22,7 @@ export const authOptions: NextAuthOptions = {
         },
       },
       async authorize(credentials) {
+        // firebaseの認証APIを叩く
         const authResponse = await fetch(
           `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${process.env.FIREBASE_API_KEY}`,
           {
