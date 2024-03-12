@@ -8,7 +8,14 @@ First, copy file from `.env.local.sample`
 cp .env.local.sample .env.local
 ```
 
-Second, run the development server:
+Second, set up the Firebase API key.
+
+```bash
+# .env.local
+FIREBASE_API_KEY=<API_KEY>
+```
+
+Thrid, run the development server:
 
 ```bash
 yarn dev
