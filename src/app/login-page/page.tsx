@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import { Container } from "react-bootstrap";
 import {
   SessionProvider,
@@ -28,12 +28,10 @@ export default function LoginPage() {
 
   return (
     <>
-      <SessionProvider>
-        <Container>
-          <h1>ログインページ</h1>
-          <LoginContent />
-        </Container>
-      </SessionProvider>
+      <Container>
+        <h1>ログインページ</h1>
+        <LoginContent />
+      </Container>
     </>
   );
 }
