@@ -5,7 +5,9 @@ import { signOut } from "next-auth/react";
  * ログアウトボタン
  * @returns ログアウトボタン
  */
-export default function LogoutButton(props: { email: string }) {
+export default function LogoutButton(props: {
+  email: string | undefined | null;
+}) {
   return (
     <>
       <p>ログイン中です</p>
