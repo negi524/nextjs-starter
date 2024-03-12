@@ -1,12 +1,4 @@
-// "use client";
 import { Container } from "react-bootstrap";
-import {
-  SessionProvider,
-  SignInResponse,
-  signIn,
-  signOut,
-  useSession,
-} from "next-auth/react";
 import LoginContent from "@/components/molecules/LoginContent";
 
 export default function LoginPage() {

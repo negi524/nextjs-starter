@@ -1,5 +1,4 @@
 // https://next-auth.js.org/getting-started/example
-import { randomBytes, randomUUID } from "crypto";
 import NextAuth from "next-auth";
 import type { NextAuthOptions } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
@@ -45,20 +44,6 @@ const authOptions: NextAuthOptions = {
     }),
     // ...add more providers here
   ],
-  // secret
-  // secret: process.env.NEXTAUTH_SECRET,
-  // // jwt
-  // jwt: {
-  //   maxAge: 3 * 24 * 60 * 60, // 3 days
-  // },
-  // /* session */
-  // session: {
-  //   maxAge: 30 * 24 * 60 * 60, // 30 days
-  //   updateAge: 24 * 60 * 60, // 24 hours
-  //   generateSessionToken: () => {
-  //     return randomUUID?.() ?? randomBytes(32).toString("hex");
-  //   },
-  // },
 };
 
 const handler = NextAuth(authOptions);
