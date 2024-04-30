@@ -5343,6 +5343,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nextjs-starter@workspace:."
   dependencies:
+    "@eslint/eslintrc": "npm:^3.0.2"
     "@eslint/js": "npm:^9.1.1"
     "@stylexjs/eslint-plugin": "npm:^0.5.1"
     "@stylexjs/nextjs-plugin": "npm:^0.5.1"
