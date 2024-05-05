@@ -8,20 +8,28 @@ import globals from "globals";
 
 // const compat = new FlatCompat();
 
-// console.log(tseslint.configs.recommended, { depth: 3 });
+// console.dir(tseslint.configs.stylisticTypeChecked, { depth: 3 });
 const config = tseslint.config(
   {
     name: "global-setting",
     ignores: ["out/", ".next/", ".babelrc.js", "next.config.js"],
   },
   eslint.configs.recommended,
-  // ...tseslint.configs.recommended,
-  // ...tseslint.configs.stylistic,
+  ...tseslint.configs.recommendedTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
   {
     languageOptions: {
+      parserOptions: {
+        // https://typescript-eslint.io/getting-started/typed-linting
+        project: true,
+      },
       globals: {
         ...globals.browser,
       },
+    },
+    rules: {
+      "no-unused-vars": "warn",
+      "@typescript-eslint/consistent-type-definitions": "off",
     },
   },
 );
