@@ -28,7 +28,7 @@ const config = tseslint.config(
       },
     },
     rules: {
-      "no-unused-vars": "off",
+      "no-unused-vars": "off", // tsのlintでチェックするため
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/consistent-type-definitions": "off",
     },
