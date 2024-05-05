@@ -28,7 +28,8 @@ const config = tseslint.config(
       },
     },
     rules: {
-      "no-unused-vars": "warn",
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/consistent-type-definitions": "off",
     },
   },
